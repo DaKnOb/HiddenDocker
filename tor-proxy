@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Running HiddenDocker..."
+echo "Generating Hidden Service Hostname / Private Key..."
+timeout 5 tor > /dev/null 2> /dev/null
+echo "Done!"
+echo "Hostname: $(cat /tor/services/hostname)"
+echo "Running Tor..."
+tor
